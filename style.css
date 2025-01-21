@@ -1,0 +1,82 @@
+body {
+  background: #000;
+  font-family: "Graphik Trial", sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartao {
+  height: 320px;
+  width: 200px;
+  perspective: 1000px;
+}
+
+.cartao-animation {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.frente,
+.verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.frente {
+  background: linear-gradient(135deg, #69239e, #69239e);
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img[alt="logo-chip"] {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 15px;
+  left: 40px;
+  display: block;
+  width: 25%;
+  height: 10%;
+}
+img[alt="logo-master"] {
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  display: block;
+  width: 30%;
+  height: 15%;
+}
+
+img {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  display: block;
+  width: 70px;
+  height: 50px;
+}
+p {
+  position: absolute;
+  text-transform: uppercase;
+  bottom: 80px;
+  font-size: 0.6rem;
+  left: 10px;
+}
+.verso {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartao:hover .cartao-animation {
+  transform: rotateY(360deg);
+}
