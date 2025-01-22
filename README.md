@@ -1,5 +1,5 @@
 # Cartão Animado do Nubank
 
-## Sobre
+## About:
 
-### - O Projeto é uma animação do cartão da nubank , feito com html, css e jquery.
+### - The Project is an animation of the nubank card, made with html, css and jquery.
